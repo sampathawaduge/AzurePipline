@@ -18,7 +18,7 @@ stages:
           - script: echo A
       - job: B
         steps:
-          - scripts: echo B
+          - script: echo B
   - stage:
     jobs:
       - job: C
