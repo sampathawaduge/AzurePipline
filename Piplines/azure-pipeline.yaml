@@ -12,18 +12,23 @@ pool:
 
 stages:
   - stage: First
+    displayName: First Stage
     jobs:
       - job: A
+        displayName: Job A
         steps:
           - script: echo A
       - job: B
+        displayName: Job B
         steps:
           - script: echo B
-  - stage:
+  - stage: Second
     jobs:
       - job: C
+        displayName: Job C
         steps:
           - script: echo C
       - job: D 
+        displayName: Job D
         steps:
           - script: echo D
