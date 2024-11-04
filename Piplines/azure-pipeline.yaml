@@ -15,7 +15,7 @@ variables:
     value: sameera
   - name: age
     value: 12
-    
+
 stages:
   - stage: First
     displayName: First Stage
@@ -24,6 +24,10 @@ stages:
         displayName: Job A
         steps:
           - script: echo $(name)
+          - task: PythonScript@0
+            inputs:
+              scriptSource: 'filePath'
+              scriptPath: Src/src.py
       - job: B
         displayName: Job B
         dependsOn: A
