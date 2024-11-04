@@ -10,6 +10,13 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+variables:
+  - name: name
+    value: sameera
+  - name: age
+    value: 12
+
+
 stages:
   - stage: First
     displayName: First Stage
@@ -17,12 +24,12 @@ stages:
       - job: A
         displayName: Job A
         steps:
-          - script: echo A
+          - script: echo $(name)
       - job: B
         displayName: Job B
         dependsOn: A
         steps:
-          - script: echo B
+          - script: echo ${{variables.age}}
   - stage: Second
     jobs:
       - job: C
