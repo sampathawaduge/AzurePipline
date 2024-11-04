@@ -20,6 +20,7 @@ stages:
           - script: echo A
       - job: B
         displayName: Job B
+        dependsOn: A
         steps:
           - script: echo B
   - stage: Second
@@ -30,5 +31,6 @@ stages:
           - script: echo C
       - job: D 
         displayName: Job D
+        dependsOn: C
         steps:
           - script: echo D
