@@ -15,8 +15,7 @@ variables:
     value: sameera
   - name: age
     value: 12
-
-
+    
 stages:
   - stage: First
     displayName: First Stage
