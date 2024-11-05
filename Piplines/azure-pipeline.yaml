@@ -28,6 +28,7 @@ stages:
             inputs:
               scriptSource: 'filePath'
               scriptPath: Src/src.py
+              arguments: "sameera"
       - job: B
         displayName: Job B
         dependsOn: A

@@ -1,1 +1,4 @@
-print('Python file called')
+import sys
+
+def printvalue(path):
+    print(path)
